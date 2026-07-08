@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/abdulqayyum4144/n8n-nodes-whoisfreaks.git"
+		"url": "https://github.com/qayyum-jfreaks/n8n-nodes-whoisfreaks"
 	},
 	"scripts": {
 		"build": "n8n-node build",
