@@ -74,6 +74,10 @@ const operationOptions = [
 		name: 'Bulk IP Reputation Lookup',
 		value: 'bulkIpReputationLookup',
 	},
+	{
+		name: 'Domain Security Lookup',
+		value: 'domainSecurityLookup',
+	}
 ];
 
 export class WhoisFreaks implements INodeType {
@@ -124,6 +128,7 @@ export class WhoisFreaks implements INodeType {
 							'domainAvailability',
 							'sslLookup',
 							'subdomainsList',
+							'domainSecurityLookup'
 						],
 					},
 				},
@@ -214,6 +219,7 @@ export class WhoisFreaks implements INodeType {
 							'bulkWhoisLookup',
 							'bulkDomainLookup',
 							'bulkDomainAvailabilityLookup',
+							'domainSecurityLookup'
 						],
 					},
 				},
@@ -329,6 +335,12 @@ export class WhoisFreaks implements INodeType {
 					const ipList = ipAddresses.split(',').map((ip) => ip.trim());
 					const endpoint = '/v1.0/security?format=json';
 					return await httpRequest.call(this, 'POST', endpoint, { ips: ipList });
+				}
+				case 'domainSecurityLookup': {
+					const domainName = this.getNodeParameter('domainName', 0) as string;
+					const format = this.getNodeParameter('format', 0, 'json') as string;
+					const endpoint = `v1/domain/security?domainName=${domainName}&format=${format}`;
+					return await httpRequest.call(this, 'GET', endpoint, undefined);
 				}
 				default:
 					throw new NodeOperationError(
