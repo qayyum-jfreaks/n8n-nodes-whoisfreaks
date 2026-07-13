@@ -77,6 +77,9 @@ const operationOptions = [
 	{
 		name: 'Domain Security Lookup',
 		value: 'domainSecurityLookup',
+	}, {
+		name: "Typo Squatting Lookup",
+		value: "typoSquattingLookup"
 	}
 ];
 
@@ -184,7 +187,7 @@ export class WhoisFreaks implements INodeType {
 				required: true,
 				displayOptions: {
 					show: {
-						operations: ['whoisReverse'],
+						operations: ['whoisReverse', 'typoSquattingLookup'],
 					},
 				},
 			},
@@ -340,6 +343,11 @@ export class WhoisFreaks implements INodeType {
 					const domainName = this.getNodeParameter('domainName', 0) as string;
 					const format = this.getNodeParameter('format', 0, 'json') as string;
 					const endpoint = `v1/domain/security?domainName=${domainName}&format=${format}`;
+					return await httpRequest.call(this, 'GET', endpoint, undefined);
+				}
+				case 'typoSquattingLookup': {
+					const keyword = this.getNodeParameter('keyword', 0) as string;
+					const endpoint = `v3.0/domain/typos?keyword=${keyword}`;
 					return await httpRequest.call(this, 'GET', endpoint, undefined);
 				}
 				default:
