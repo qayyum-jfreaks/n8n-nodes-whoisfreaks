@@ -37,6 +37,7 @@ This node natively supports the following WhoisFreaks features across both singl
 * **IP Geolocation:** Trace geographical positioning variables (country, city, ASN) from an IP address.
 * **IP Reputation:** Run advanced security assessment queries on IP addresses.
 * **Domain Security Lookup** Check domain security if a domain is being used in any sort of malware or phishing campaign.
+* **Typo Squatting Lookup** Check domain typosquatting.
 
 ### Bulk Operations
 * **Bulk WHOIS Lookup:** Batch audit multiple domain registrants at once.
