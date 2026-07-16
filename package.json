@@ -3,13 +3,13 @@
 	"version": "1.0.9",
 	"description": "An n8n community node for WhoisFreaks WHOIS, DNS, SSL, subdomain, availability, geolocation, and reputation lookups.",
 	"license": "MIT",
-	"homepage": "https://github.com/abdulqayyum4144/n8n-nodes-whoisfreaks",
+	"homepage": "https://github.com/qayyum-jfreaks/n8n-nodes-whoisfreaks",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"author": {
 		"name": "ABDULQAYYUM",
-		"email": "abdulqayyum4144@gmail.com"
+		"email": "qayyum@jfreaks.com"
 	},
 	"repository": {
 		"type": "git",
