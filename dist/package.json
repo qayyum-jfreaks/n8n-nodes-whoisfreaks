@@ -1,0 +1,50 @@
+{
+    "name": "n8n-nodes-whoisfreaks",
+    "version": "1.0.7",
+    "description": "An n8n community node for WhoisFreaks WHOIS, DNS, SSL, subdomain, availability, geolocation, and reputation lookups.",
+    "license": "MIT",
+    "homepage": "https://github.com/abdulqayyum4144/n8n-nodes-whoisfreaks",
+    "keywords": [
+        "n8n-community-node-package"
+    ],
+    "author": {
+        "name": "ABDULQAYYUM",
+        "email": "abdulqayyum4144@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/qayyum-jfreaks/n8n-nodes-whoisfreaks.git"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/nodes/WhoisFreaks/credentials/WhoisFreaksApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/WhoisFreaks/WhoisFreaks.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^19.0.4",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
