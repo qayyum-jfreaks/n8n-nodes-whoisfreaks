@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-whoisfreaks",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "An n8n community node for WhoisFreaks WHOIS, DNS, SSL, subdomain, availability, geolocation, and reputation lookups.",
 	"license": "MIT",
 	"homepage": "https://github.com/abdulqayyum4144/n8n-nodes-whoisfreaks",
