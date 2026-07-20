@@ -1,4 +1,4 @@
-import type { IconFile, ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { IconFile, IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 export declare class WhoisFreaksApi implements ICredentialType {
     name: string;
     displayName: string;
@@ -8,11 +8,6 @@ export declare class WhoisFreaksApi implements ICredentialType {
     };
     documentationUrl: string;
     properties: INodeProperties[];
-    test: {
-        request: {
-            baseURL: string;
-            url: string;
-            method: "GET";
-        };
-    };
+    authenticate: IAuthenticateGeneric;
+    test: ICredentialTestRequest;
 }

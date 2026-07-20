@@ -24,6 +24,14 @@ class WhoisFreaksApi {
         };
         this.documentationUrl = 'https://whoisfreaks.com/documentation';
         this.properties = properties;
+        this.authenticate = {
+            type: 'generic',
+            properties: {
+                qs: {
+                    apiKey: '={{$credentials.apiKey}}',
+                },
+            },
+        };
         this.test = {
             request: {
                 baseURL: 'https://api.whoisfreaks.com',
