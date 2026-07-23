@@ -69,8 +69,8 @@ const operationOptions = [
         value: 'bulkIpReputationLookup',
     },
     {
-        name: 'Domain Security Lookup',
-        value: 'domainSecurityLookup',
+        name: 'Domain Reputation Lookup',
+        value: 'domainReputationLookup',
     }, {
         name: "Typo Squatting Lookup",
         value: "typoSquattingLookup"
@@ -124,7 +124,7 @@ class WhoisFreaks {
                                 'domainAvailability',
                                 'sslLookup',
                                 'subdomainsList',
-                                'domainSecurityLookup'
+                                'domainReputationLookup'
                             ],
                         },
                     },
@@ -215,7 +215,7 @@ class WhoisFreaks {
                                 'bulkWhoisLookup',
                                 'bulkDomainLookup',
                                 'bulkDomainAvailabilityLookup',
-                                'domainSecurityLookup'
+                                'domainReputationLookup'
                             ],
                         },
                     },
@@ -331,7 +331,7 @@ class WhoisFreaks {
                     const endpoint = '/v1.0/security?format=json';
                     return await HttpWrapper_1.httpRequest.call(this, 'POST', endpoint, { ips: ipList });
                 }
-                case 'domainSecurityLookup': {
+                case 'domainRepurationLookup': {
                     const domainName = this.getNodeParameter('domainName', 0);
                     const format = this.getNodeParameter('format', 0, 'json');
                     const endpoint = `v1/domain/security?domainName=${domainName}&format=${format}`;
