@@ -331,7 +331,7 @@ class WhoisFreaks {
                     const endpoint = '/v1.0/security?format=json';
                     return await HttpWrapper_1.httpRequest.call(this, 'POST', endpoint, { ips: ipList });
                 }
-                case 'domainRepurationLookup': {
+                case 'domainReputationLookup': {
                     const domainName = this.getNodeParameter('domainName', 0);
                     const format = this.getNodeParameter('format', 0, 'json');
                     const endpoint = `v1/domain/security?domainName=${domainName}&format=${format}`;

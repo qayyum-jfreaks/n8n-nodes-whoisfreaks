@@ -339,7 +339,7 @@ export class WhoisFreaks implements INodeType {
 					const endpoint = '/v1.0/security?format=json';
 					return await httpRequest.call(this, 'POST', endpoint, { ips: ipList });
 				}
-				case 'domainRepurationLookup': {
+				case 'domainReputationLookup': {
 					const domainName = this.getNodeParameter('domainName', 0) as string;
 					const format = this.getNodeParameter('format', 0, 'json') as string;
 					const endpoint = `v1/domain/security?domainName=${domainName}&format=${format}`;
